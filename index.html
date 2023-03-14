@@ -5,44 +5,437 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño Sitios Web - Fase 1</title>
+    <title>Diseño Sitios Web - Fase 2</title>
+    <style>
+        /*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            /* display: flex;
+  justify-content: space-around; */
+        }
+
+        nav {
+            float: left;
+            /* Desplazamos el nav hacia la izquierda */
+        }
+
+        nav ul {
+            list-style: none;
+            overflow: hidden;
+            /* Limpiamos errores de float */
+        }
+
+        nav ul li {
+            float: left;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            display: block;
+            /* Convertimos los elementos a en elementos bloque para manipular el padding */
+            padding: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li:hover {
+            background: #3ead47;
+        }
+
+        .contenido {
+            padding-top: 80px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /*Agregamos margenes inferiores a los parrafos*/
+        p {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: brown;
+            text-align: center;
+        }
+
+        h3 {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
-<style>
-    * {
-        text-align: center;
-        background-color: black;
-        color: white;
-    }
-</style>
-
 <body>
-    <u>
-        <h1>Bienvenido a mi sitio Web</h1>
-    </u>
-    <h2>Proyecto de sitio Web 2023 - 1391</h2>
-    <hr><i>
-        <h3>Nombre: Maicol Barón</h3>
-        <h3>Programa: Ingeniería de Sistemas (Diseño de Sitios Web)</h3>
-        <h3>Fecha de Creación: 11 de Febrero del 2023</h3>
-    </i>
-    <hr>
-    <p> Mis datos de contacto son: <br>
-        skype: maicolbaron <br>
-        celular: 3202607492 <br>
-        email: mabaronj@unadvirtual.edu.co <br>
-    </p>
-    <hr>
-    <u><comentarios-->PRUEBAS</comentarios--></u>
-    <p>
-    <ol><b>Información Personal:</b>
-        <li>Edad: 35 años</li>
-        <li>Ciudad: Bogota</li>
-        <li>Dirección: Cra 50 # 15-84</li>
-        <li>País: Colombia</li>
-    </ol>
-    </p>
+    <header>
+        <h1>
+            Box Model
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="inicio">Inicio</a></li>
+                <ul>
+                    <li><a href="Introducción">Introducción al modelo de caja</a></li>
+                    <ul>
+                        <li><a href="">Cajas de bloque (Block boxes)</a></li>
+                        <li><a href="">Cajas en línea (Inline boxes)</a></li>
+                    </ul>
 
+
+                </ul>
+                <li><a href="">Box Model</a></li>
+                <ul>
+                    <li><a href="">Las áreas del modelo de caja</a></li>
+                    <li><a href="">Herramienta de Desarrollo (DevTools)</a></li>
+                    <ul>
+                        <li><a href="">Content</a></li>
+                        <li><a href="">Padding</a></li>
+                        <li><a href="">Border</a></li>
+                        <li><a href="">Margin</a></li>
+                    </ul>
+                    <li><a href="">Outline</a></li>
+                    <li><a href="">Conclusión:</a></li>
+                </ul>
+                <li><a href="#Mockup">Mockup</a></li>
+                <li><a href="#acercade">Acerca de</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <hr>
+    <hr>
+    <!-- Este es el Inicio de la página -->
+    <section id="inicio">
+        <h2>
+            Inicio
+        </h2>
+        <p>
+            ¡Hola gente bonita!👋 <br><br>
+
+            En este artículo, voy a explicar como funciona el box-model y por qué se llama de esa manera. Además,
+            también te daré una visión más profunda del comportamiento del modelo de caja. <br><br>
+        </p>
+    </section>
+    <hr>
+    <!-- Esta es la sección de la Introducción del tema -->
+    <section id="Introducción">
+        <h2>
+            🧐 Introducción al modelo de caja
+        </h2>
+        <p>
+            El nombre 'box-model' (modelo de caja) se llama así porque, en los navegadores, todo se construye a partir
+            de cajas. <br><br>
+
+            Entonces, lo primero que debemos de entender, es que cada elemento que definimos en un documento HTML se
+            mostrará en el navegador como una caja rectangular esta es la forma en que se representan todos los
+            elementos, no existen elementos triangulares, redondos, poligonales etc. Todos los elementos en HTML por
+            defecto son rectangulares ya que internamente el navegador dibuja un rectángulo. <br><br>
+
+            ⚠️ Las únicas excepciones son las listas y las tablas, que generan más de una caja, y los elementos con
+            display: none o display: contents, que no crean ninguna caja. <br><br>
+
+            Aunque usted visualice en un sitio web algún elemento diseñado en CSS que utiliza border-radius para parecer
+            un círculo, ese elemento seguirá siendo rectangular y esto es porque como he dicho anteriormente cada
+            elemento del diseño web es una caja, el navegador renderiza cada elemento de la página web como un elemento
+            rectangular y con CSS nosotros definimos las propiedades como el tamaño, el color, los estilos, el margen y
+            mucho más de estos elementos rectangulares. <br><br>
+
+            Esto puedes comprobarlo con el siguiente ejemplo, con ayuda de la propiedad outline, podemos ver todos los
+            elementos de la pagina de inicio de Google de forma rectangular y esto lo puedes hacer con cualquier otro
+            sitio web. <br><br>
+        </p>
+        <img src="imagen/outline.png" alt="outline">
+        <p>
+
+            El navegador Microsoft Edge tiene una herramienta llamada 3D view que además de encontrar áreas de
+            anidamiento profundo del DOM y ayudar a la depuración de z-index también muestra todas las cajas
+            contenedoras de forma visual en 3D. Es uno de los mejores ejemplos visuales para poder comprender el box
+            model:
+
+        </p>
+        <img src="imagen/ejemplo box model.png" alt="ejemplo box model">
+        <p>
+            Como ya lo mencione anteriormente cada elemento HTML en una página web es una caja, pero hay dos tipos
+            básicos de cajas: <br>
+            <li>Block boxes.</li>
+            <li>Inline boxes.</li>
+            <br>
+            Estos dos tipos de cajas, existieron desde el principio de la web: <br><br>
+
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            📦 Cajas de bloque (Block boxes)
+        </h2>
+        <p>
+            Las cajas de bloque, por defecto, ocupan todo el espacio a lo ancho del contenedor. El elemento HTML común
+            para una caja de bloque es el elemento
+            (div).
+        </p>
+    </section>
+
+    <section>
+        <h2>
+            📦 Cajas en línea (Inline boxes)
+        </h2>
+        <p>
+            Las cajas en línea, por defecto, toman el espacio según el contenido envuelto. El elemento HTML más común
+            para una caja en línea es el elemento (span).
+
+            El comportamiento de todas las cajas proviene de la propiedad display de CSS. Si quieres aprender más
+            acerca de esta propiedad te invito a leer mi articulo. <br> <br>
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            📦 Las áreas del modelo de caja
+        </h2>
+        <p>
+            Como ya explique, cada elemento HTML es una caja que tiene 4 lados y se compone de cuatro áreas:
+
+        <h3>
+            Internos:
+        </h3>
+
+        <li>content</li>
+        <li>padding</li>
+        <li>border</li>
+
+        <h3>
+            Externos:
+        </h3>
+
+        <li>margin</li>
+        <br>
+        Estas áreas se apilan para formar el modelo de caja o box model. Cada elemento HTML es una caja que podemos
+        controlar en el espacio exterior con la propiedad margin, después, podemos darle un borde y con la propiedad
+        padding, también podemos proporcionar los espacios interiores entre el contenido y el borde dentro de la
+        caja. <br><br>
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            🛠️ Herramienta de Desarrollo (DevTools)
+        </h2>
+        <p>
+            Si vas a inspeccionar cada elemento HTML, En la herramienta de desarrollador de cada navegador hay una
+            pestaña llamada "Estilos" y lo que hace es mostrar el modelo de caja.
+
+            <li>El content o contenido es representado por el color azul.</li>
+            <li>El padding es representado por el color verde claro.</li>
+            <li>El border es representado por un color amarillo.</li>
+            <li>El margen es representado por un color naranja.</li>
+
+
+
+
+        </p>
+        <img src="imagen/margin.png" alt="margin">
+        <p>
+            Si te posicionas en cada elemento HTML de la página web y lo seleccionas, estos elementos se pintaran de los
+            colores que he mencionado y esto nos ayuda a detectar cuanto de padding o margin tiene cada elemento.
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            🎦 Content
+        </h2>
+        <p>
+            El contenido de la caja, donde aparecen texto, imágenes, etc. <br><br>
+
+            El área del content (como su nombre lo dice) contiene el “contenido” central a mostrar, es decir, un texto,
+            una imagen, un video, etc. El contenido siempre es lo que queremos mostrarle al usuario. Esta área en muchas
+            ocasiones tiene un color o imagen de fondo para hacerla más atractiva. <br><br>
+            Como podemos observar en la imagen, el contenido es el área central de todo el elemento, de tal forma, que
+            el siguiente elemento que lo rodea es el padding. El tamaño de esta área se puede modificar con las
+            propiedades height , width , max-height , max-width , min-height , min-width. <br><br>
+        </p>
+        <img src="imagen/content.png" alt="content">
+        <p>
+            Cuando se establece una anchura o una altura en un elemento, esto sólo se aplica al área de contenido
+            (content) de la caja, no a la caja completa. El padding y border se añaden a la anchura y la altura para
+            obtener el tamaño total de la caja, si quieres profundizar mas en este tema, te invito a leer mi articulo de
+            box-sizing. <br><br>
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            🔲 Padding
+        </h2>
+        <p>
+
+            Es el área alrededor del contenido. El padding es transparente. <br><br>
+
+            El padding es una separación o espacio interior que existe entre el contenido y el borde de la caja, el cual
+            se utiliza para dar una apariencia estética más atractiva y que el contenido no este pegado al borde.
+            <br><br>
+
+            Cabe mencionar que el padding sigue siendo parte de la caja visible, por lo que, si tenemos una imagen o
+            color de fondo, este se extenderá a través del padding. El padding está delimitado por el borde. <br><br>
+
+            Puedes usar el mismo valor en toda la caja, por ejemplo, padding: 20px o puedes darle padding sólo a un lado
+            de la caja, por ejemplo, padding-right: 10px. <br><br>
+
+            Recuerda que los valores pueden ser positivos o negativos. <br><br>
+
+            Además, el shorthand padding permite dar un valor diferente a cada lado, sin necesidad de escribirlos por
+            separado. Por ejemplo: <br><br>
+        </p>
+        <img src="imagen/padding.png" alt="padding">
+    </section>
+    <hr>
+    <section>
+        <h2>
+            ⬜ Border
+        </h2>
+        <p>
+            El borde es la línea que rodea la caja, es como la frontera que rodea al elemento, esta se utiliza para
+            darle una apariencia estética a la caja, pues nos permite dibujar una línea de algún color, la línea puede
+            tener los siguientes estilos: <br><br>
+        </p>
+        <img src="imagen/border.png" alt="Border">
+        <p>
+            Las tres propiedades básicas para crear bordes son:
+
+            <li>border-style: sus valores son solid, dashed y dotted.</li>
+            <li>border-width: indica al navegador el tamaño del borde, normalmente, se utiliza el valor en píxeles para
+                esta propiedad, por ejemplo, border-width: 5px.</li>
+            <li>border-color: por defecto, el valor utiliza el currentColor del texto. Sin embargo, preferimos definirlo
+                aunque no sea necesario. Por ejemplo, border-color: red.</li> <br>
+
+            La mayoría de los desarrolladores web no utilizan estas tres propiedades por separado. En su lugar, existe
+            un shorthand: border. Con esta propiedad, podemos escribir sólo border: solid 5px red.
+
+            También podemos controlar y dar un estilo diferente a cada parte de los bordes, por ejemplo: <br><br>
+        </p>
+        <img src="imagen/stile borde.png" alt="stile borde">
+    </section>
+    <hr>
+    <section>
+        <h2>
+            🔳 Margin
+        </h2>
+        <p>
+            Es la separación entre una caja y las cajas adyacentes. <br><br>
+
+            El margen es la última área del Box Model y se puede ver como una separación invisible o transparente que
+            ayuda a separar un elemento de otro. Cuando definimos un color o imagen de fondo, este no se propaga a esta
+            sección. <br><br>
+
+            Los márgenes siempre quedan fuera del modelo de caja, por lo que pueden utilizarse para crear espacio entre
+            los elementos. <br><br>
+
+            Recuerda que los valores pueden ser positivos o negativos. <br><br>
+        </p>
+        <img src="imagen/stile margin.png" alt="stile margin">
+        <p>
+            Cada elemento tiene un margen gracias a las hojas de estilo del navegador. <br><br>
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            ⬜ Outline
+        </h2>
+        <p>
+            Outline es la línea que rodea a la caja entre el border y el margin. Se utiliza para dibujar un contorno
+            alrededor de un elemento. Un contorno es una línea que se dibuja fuera de los bordes de un elemento. Se
+            puede utilizar con fines decorativos. <br><br>
+
+            La propiedad outline no pertenece al modelo de caja sin embargo esta propiedad es una decoración gráfica que
+            hace que los elementos que ganan el foco, que son por lo general los (input), se coloren como con una ligera
+            aura que los rodea.
+
+            Las propiedades de outline son:
+
+            <li>outline-width</li>
+            <li>outline-style</li>
+            <li>outline-color</li>
+            <li>outline-offset</li>
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h2>
+            📋 Conclusión:
+        </h2>
+        <p>
+            ☑️ Cada elemento HTML en una pagina web es una caja rectangular. <br> ☑️ El contenido de la caja es donde
+            aparecen texto, imágenes, etc. <br> ☑️ El padding es el área alrededor del contenido. <br> ☑️ El borde es
+            una línea que rodea el padding y el content. <br> ☑️ El margin es la separación entre una caja y las cajas
+            adyacentes. <br>
+        </p>
+    </section>
+    <hr>
+    <section id="Mockup">
+        <h2>
+            Mockup
+        </h2>
+        <img src="imagen/Mockup Fase 2.drawio.png" alt="Mockup">
+    </section>
+    <hr>
+    <a name="acercade"></a>
+    <section>
+        <u>
+            <h1>Bienvenido a mi sitio Web</h1>
+        </u>
+        <h2>Proyecto de sitio Web 2023 - 1391</h2>
+        <hr><i>
+            <h3>Nombre: Maicol Barón</h3>
+            <h3>Programa: Ingeniería de Sistemas (Diseño de Sitios Web)</h3>
+            <h3>Fecha de Creación: 11 de Febrero del 2023</h3>
+        </i>
+        <hr>
+        <p> Mis datos de contacto son: <br>
+            skype: maicolbaron <br>
+            celular: 3202607492 <br>
+            email: mabaronj@unadvirtual.edu.co <br>
+        </p>
+        <hr>
+        <u><comentarios-->PRUEBAS</comentarios--></u>
+        <p>
+        <ol><b>Información Personal:</b>
+            <li>Edad: 35 años</li>
+            <li>Ciudad: Bogota</li>
+            <li>Dirección: Cra 50 # 15-84</li>
+            <li>País: Colombia</li>
+        </ol>
+        </p>
+    </section>
+    <hr>
+    <hr>
+    <footer>
+        <p>
+            Esta página fue desarrollada por el equipo de Diseño de Sitios Web de la Universidad Nacional Abierta y a
+            Distancia por el grupo 1391. <br>
+            Fecha de actualización: 13 de Marzo del 2023. <br>
+            @ Derechos reservados
+        </p>
+    </footer>
 </body>
 
 </html>
