@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="contenedor">
+    <header>
+        <h1 class="centrado">
+            Box Model
+        </h1>
+    </header>
+    <nav>
+        <ul class="menu-horizontal">
+            <li> <a href="index.html">Inicio</a> </li>
+            <li> <a href="audio.html">Audio</a> </li>
+            <li> <a href="tema.html">Tema</a> </li>
+        </ul>
+    </nav>
+    <aside>
+        <ul class="menu-aside">
+            <li> <a href="index.html">Inicio</a> </li>
+            <li> <a href="audio.html">Audio del Tema</a> </li>
+            <li> <a href="tema.html">El Tema</a> </li>
+            <li> <a href="nosotros.html">Nosotros</a> </li>
+        </ul>
+    </aside>
+    <main>
+        <!-- Está es la sección para el tema de bloques de caja -->
+    <section id="boxmodel">
+        <br><br><br><br><br><br>
+        <h2>
+            📦 Cajas de bloque (Block boxes)
+        </h2>
+        <br><br>
+        <p>
+            Las cajas de bloque, por defecto, ocupan todo el espacio a lo ancho del contenedor. El elemento HTML común
+            para una caja de bloque es el elemento
+            (div).
+        </p>
+    </section>
+    <!-- Está es la sección para el tema de cajas en línea -->
+    <section id="Inlineboxes">
+        <h2>
+            📦 Cajas en línea (Inline boxes)
+        </h2>
+        <br><br>
+        <p>
+            Las cajas en línea, por defecto, toman el espacio según el contenido envuelto. El elemento HTML más común
+            para una caja en línea es el elemento (span).
+
+            El comportamiento de todas las cajas proviene de la propiedad display de CSS. Si quieres aprender más
+            acerca de esta propiedad te invito a leer mi articulo. <br> <br>
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de areas del modelo de caja -->
+    <section id="areas">
+        <br><br><br><br><br><br>
+        <h2>
+            📦 Las áreas del modelo de caja
+        </h2>
+        <br><br>
+        <p>
+            Como ya explique, cada elemento HTML es una caja que tiene 4 lados y se compone de cuatro áreas:
+
+        <h3>
+            Internos:
+        </h3>
+
+        <li>content</li>
+        <li>padding</li>
+        <li>border</li>
+
+        <h3>
+            Externos:
+        </h3>
+
+        <li>margin</li>
+        <br>
+        Estas áreas se apilan para formar el modelo de caja o box model. Cada elemento HTML es una caja que podemos
+        controlar en el espacio exterior con la propiedad margin, después, podemos darle un borde y con la propiedad
+        padding, también podemos proporcionar los espacios interiores entre el contenido y el borde dentro de la
+        caja. <br><br>
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de DevTools -->
+    <section id="devtools">
+        <br><br><br><br><br><br>
+        <h2>
+            🛠️ Herramienta de Desarrollo (DevTools)
+        </h2>
+        <br><br>
+        <p>
+            Si vas a inspeccionar cada elemento HTML, En la herramienta de desarrollador de cada navegador hay una
+            pestaña llamada "Estilos" y lo que hace es mostrar el modelo de caja.
+
+            <li>El content o contenido es representado por el color azul.</li>
+            <li>El padding es representado por el color verde claro.</li>
+            <li>El border es representado por un color amarillo.</li>
+            <li>El margen es representado por un color naranja.</li>
+        </p>
+        <img src="imagen/margin.png" alt="margin">
+        <p>
+            Si te posicionas en cada elemento HTML de la página web y lo seleccionas, estos elementos se pintaran de los
+            colores que he mencionado y esto nos ayuda a detectar cuanto de padding o margin tiene cada elemento.
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de content -->
+    <section id="content">
+        <br><br><br><br><br><br>
+        <h2>
+            🎦 Content
+        </h2>
+        <br><br>
+        <p>
+            El contenido de la caja, donde aparecen texto, imágenes, etc. <br><br>
+
+            El área del content (como su nombre lo dice) contiene el “contenido” central a mostrar, es decir, un texto,
+            una imagen, un video, etc. El contenido siempre es lo que queremos mostrarle al usuario. Esta área en muchas
+            ocasiones tiene un color o imagen de fondo para hacerla más atractiva. <br><br>
+            Como podemos observar en la imagen, el contenido es el área central de todo el elemento, de tal forma, que
+            el siguiente elemento que lo rodea es el padding. El tamaño de esta área se puede modificar con las
+            propiedades height , width , max-height , max-width , min-height , min-width. <br><br>
+        </p>
+        <img src="imagen/content.png" alt="content">
+        <p>
+            Cuando se establece una anchura o una altura en un elemento, esto sólo se aplica al área de contenido
+            (content) de la caja, no a la caja completa. El padding y border se añaden a la anchura y la altura para
+            obtener el tamaño total de la caja, si quieres profundizar mas en este tema, te invito a leer mi articulo de
+            box-sizing. <br><br>
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de Padding -->
+    <section id="Padding">
+        <br><br><br><br><br><br>
+        <h2>
+            🔲 Padding
+        </h2>
+        <br><br>
+        <p>
+
+            Es el área alrededor del contenido. El padding es transparente. <br><br>
+
+            El padding es una separación o espacio interior que existe entre el contenido y el borde de la caja, el cual
+            se utiliza para dar una apariencia estética más atractiva y que el contenido no este pegado al borde.
+            <br><br>
+
+            Cabe mencionar que el padding sigue siendo parte de la caja visible, por lo que, si tenemos una imagen o
+            color de fondo, este se extenderá a través del padding. El padding está delimitado por el borde. <br><br>
+
+            Puedes usar el mismo valor en toda la caja, por ejemplo, padding: 20px o puedes darle padding sólo a un lado
+            de la caja, por ejemplo, padding-right: 10px. <br><br>
+
+            Recuerda que los valores pueden ser positivos o negativos. <br><br>
+
+            Además, el shorthand padding permite dar un valor diferente a cada lado, sin necesidad de escribirlos por
+            separado. Por ejemplo: <br><br>
+        </p>
+        <img src="imagen/padding.png" alt="padding">
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de Border -->
+    <section id="Border">
+        <br><br><br><br><br><br>
+        <h2>
+            ⬜ Border
+        </h2>
+        <br><br>
+        <p>
+            El borde es la línea que rodea la caja, es como la frontera que rodea al elemento, esta se utiliza para
+            darle una apariencia estética a la caja, pues nos permite dibujar una línea de algún color, la línea puede
+            tener los siguientes estilos: <br><br>
+        </p>
+        <img src="imagen/border.png" alt="Border">
+        <p>
+            Las tres propiedades básicas para crear bordes son:
+
+            <li>border-style: sus valores son solid, dashed y dotted.</li>
+            <li>border-width: indica al navegador el tamaño del borde, normalmente, se utiliza el valor en píxeles para
+                esta propiedad, por ejemplo, border-width: 5px.</li>
+            <li>border-color: por defecto, el valor utiliza el currentColor del texto. Sin embargo, preferimos definirlo
+                aunque no sea necesario. Por ejemplo, border-color: red.</li> <br>
+
+            La mayoría de los desarrolladores web no utilizan estas tres propiedades por separado. En su lugar, existe
+            un shorthand: border. Con esta propiedad, podemos escribir sólo border: solid 5px red.
+
+            También podemos controlar y dar un estilo diferente a cada parte de los bordes, por ejemplo: <br><br>
+        </p>
+        <img src="imagen/stile borde.png" alt="stile borde">
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de Margin -->
+    <section id="Margin">
+        <br><br><br><br><br><br>
+        <h2>
+            🔳 Margin
+        </h2>
+        <br><br>
+        <p>
+            Es la separación entre una caja y las cajas adyacentes. <br><br>
+
+            El margen es la última área del Box Model y se puede ver como una separación invisible o transparente que
+            ayuda a separar un elemento de otro. Cuando definimos un color o imagen de fondo, este no se propaga a esta
+            sección. <br><br>
+
+            Los márgenes siempre quedan fuera del modelo de caja, por lo que pueden utilizarse para crear espacio entre
+            los elementos. <br><br>
+
+            Recuerda que los valores pueden ser positivos o negativos. <br><br>
+        </p>
+        <img src="imagen/stile margin.png" alt="stile margin">
+        <p>
+            Cada elemento tiene un margen gracias a las hojas de estilo del navegador. <br><br>
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para el tema de Outline -->
+    <section id="Outline">
+        <br><br><br><br><br><br>
+        <h2>
+            ⬜ Outline
+        </h2>
+        <br><br>
+        <p>
+            Outline es la línea que rodea a la caja entre el border y el margin. Se utiliza para dibujar un contorno
+            alrededor de un elemento. Un contorno es una línea que se dibuja fuera de los bordes de un elemento. Se
+            puede utilizar con fines decorativos. <br><br>
+
+            La propiedad outline no pertenece al modelo de caja sin embargo esta propiedad es una decoración gráfica que
+            hace que los elementos que ganan el foco, que son por lo general los (input), se coloren como con una ligera
+            aura que los rodea.
+
+            Las propiedades de outline son:
+
+            <li>outline-width</li>
+            <li>outline-style</li>
+            <li>outline-color</li>
+            <li>outline-offset</li>
+        </p>
+    </section>
+    <hr>
+    <!-- Está es la sección para las Conclusiones -->
+    <section id="Conclusión">
+        <br><br><br><br><br><br>
+        <h2>
+            📋 Conclusión:
+        </h2>
+        <br><br>
+        <p>
+            ☑️ Cada elemento HTML en una pagina web es una caja rectangular. <br> ☑️ El contenido de la caja es donde
+            aparecen texto, imágenes, etc. <br> ☑️ El padding es el área alrededor del contenido. <br> ☑️ El borde es
+            una línea que rodea el padding y el content. <br> ☑️ El margin es la separación entre una caja y las cajas
+            adyacentes. <br>
+        </p>
+    </section>
+    </main>
+    <footer class="centrado">
+        <p>
+            Esta página fue desarrollada por el equipo de Diseño de Sitios Web de la Universidad Nacional Abierta y a
+            Distancia por el grupo 1391. <br>
+            Fecha de actualización: 7 de Abril del 2023. <br>
+            @ Derechos reservados
+        </p>
+    </footer>
+</body>
+
+</html>
