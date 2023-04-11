@@ -71,7 +71,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="audio1.html">Audio</a></li>
-                            
                             <!-- <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -106,50 +105,58 @@
         </ul>
     </aside>
     <main>
-        <section>
+        <!-- Está es la sección para el tema de areas del modelo de caja -->
+        <section id="areas">
+
             <h2>
-                🧐 Introducción al modelo de caja
+                📦 Las áreas del modelo de caja
             </h2>
 
             <p>
-                El nombre 'box-model' (modelo de caja) se llama así porque, en los navegadores, todo se construye a
-                partir
-                de cajas. <br><br>
+                Como ya explique, cada elemento HTML es una caja que tiene 4 lados y se compone de cuatro áreas:
 
-                Entonces, lo primero que debemos de entender, es que cada elemento que definimos en un documento HTML se
-                mostrará en el navegador como una caja rectangular esta es la forma en que se representan todos los
-                elementos, no existen elementos triangulares, redondos, poligonales etc. Todos los elementos en HTML por
-                defecto son rectangulares ya que internamente el navegador dibuja un rectángulo. <br><br>
+            <h3>
+                Internos:
+            </h3>
 
-                ⚠️ Las únicas excepciones son las listas y las tablas, que generan más de una caja, y los elementos con
-                display: none o display: contents, que no crean ninguna caja. <br><br>
+            <li>content</li>
+            <li>padding</li>
+            <li>border</li>
 
-                Aunque usted visualice en un sitio web algún elemento diseñado en CSS que utiliza border-radius para
-                parecer
-                un círculo, ese elemento seguirá siendo rectangular y esto es porque como he dicho anteriormente cada
-                elemento del diseño web es una caja, el navegador renderiza cada elemento de la página web como un
-                elemento
-                rectangular y con CSS nosotros definimos las propiedades como el tamaño, el color, los estilos, el
-                margen y
-                mucho más de estos elementos rectangulares. <br><br>
+            <h3>
+                Externos:
+            </h3>
 
-                Esto puedes comprobarlo con el siguiente ejemplo, con ayuda de la propiedad outline, podemos ver todos
-                los
-                elementos de la pagina de inicio de Google de forma rectangular y esto lo puedes hacer con cualquier
-                otro
-                sitio web. <br><br>
+            <li>margin</li>
+            <br>
+            Estas áreas se apilan para formar el modelo de caja o box model. Cada elemento HTML es una caja que podemos
+            controlar en el espacio exterior con la propiedad margin, después, podemos darle un borde y con la propiedad
+            padding, también podemos proporcionar los espacios interiores entre el contenido y el borde dentro de la
+            caja. <br><br>
             </p>
+        </section>
+        <hr>
+        <!-- Está es la sección para el tema de DevTools -->
+        <section id="devtools">
 
-            <img src="imagen/outline.png" alt="outline">
+            <h2>
+                🛠️ Herramienta de Desarrollo (DevTools)
+            </h2>
 
             <p>
-                Como ya lo mencione anteriormente cada elemento HTML en una página web es una caja, pero hay dos tipos
-                básicos de cajas: <br>
-                <li>Block boxes.</li>
-                <li>Inline boxes.</li>
-                <br>
-                Estos dos tipos de cajas, existieron desde el principio de la web: <br><br>
+                Si vas a inspeccionar cada elemento HTML, En la herramienta de desarrollador de cada navegador hay una
+                pestaña llamada "Estilos" y lo que hace es mostrar el modelo de caja.
 
+                <li>El content o contenido es representado por el color azul.</li>
+                <li>El padding es representado por el color verde claro.</li>
+                <li>El border es representado por un color amarillo.</li>
+                <li>El margen es representado por un color naranja.</li>
+            </p>
+            <img src="imagen/margin.png" alt="margin">
+            <p>
+                Si te posicionas en cada elemento HTML de la página web y lo seleccionas, estos elementos se pintaran de
+                los
+                colores que he mencionado y esto nos ayuda a detectar cuanto de padding o margin tiene cada elemento.
             </p>
         </section>
     </main>

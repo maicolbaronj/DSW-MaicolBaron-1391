@@ -71,7 +71,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="audio1.html">Audio</a></li>
-                            
                             <!-- <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -106,52 +105,95 @@
         </ul>
     </aside>
     <main>
-        <section>
+        <!-- Está es la sección para el tema de Border -->
+        <section id="Border">
+
             <h2>
-                🧐 Introducción al modelo de caja
+                ⬜ Border
             </h2>
 
             <p>
-                El nombre 'box-model' (modelo de caja) se llama así porque, en los navegadores, todo se construye a
-                partir
-                de cajas. <br><br>
-
-                Entonces, lo primero que debemos de entender, es que cada elemento que definimos en un documento HTML se
-                mostrará en el navegador como una caja rectangular esta es la forma en que se representan todos los
-                elementos, no existen elementos triangulares, redondos, poligonales etc. Todos los elementos en HTML por
-                defecto son rectangulares ya que internamente el navegador dibuja un rectángulo. <br><br>
-
-                ⚠️ Las únicas excepciones son las listas y las tablas, que generan más de una caja, y los elementos con
-                display: none o display: contents, que no crean ninguna caja. <br><br>
-
-                Aunque usted visualice en un sitio web algún elemento diseñado en CSS que utiliza border-radius para
-                parecer
-                un círculo, ese elemento seguirá siendo rectangular y esto es porque como he dicho anteriormente cada
-                elemento del diseño web es una caja, el navegador renderiza cada elemento de la página web como un
-                elemento
-                rectangular y con CSS nosotros definimos las propiedades como el tamaño, el color, los estilos, el
-                margen y
-                mucho más de estos elementos rectangulares. <br><br>
-
-                Esto puedes comprobarlo con el siguiente ejemplo, con ayuda de la propiedad outline, podemos ver todos
-                los
-                elementos de la pagina de inicio de Google de forma rectangular y esto lo puedes hacer con cualquier
-                otro
-                sitio web. <br><br>
+                El borde es la línea que rodea la caja, es como la frontera que rodea al elemento, esta se utiliza para
+                darle una apariencia estética a la caja, pues nos permite dibujar una línea de algún color, la línea
+                puede
+                tener los siguientes estilos: <br><br>
             </p>
+            <img src="imagen/border.png" alt="Border">
+            <p>
+                Las tres propiedades básicas para crear bordes son:
 
-            <img src="imagen/outline.png" alt="outline">
+                <li>border-style: sus valores son solid, dashed y dotted.</li>
+                <li>border-width: indica al navegador el tamaño del borde, normalmente, se utiliza el valor en píxeles
+                    para
+                    esta propiedad, por ejemplo, border-width: 5px.</li>
+                <li>border-color: por defecto, el valor utiliza el currentColor del texto. Sin embargo, preferimos
+                    definirlo
+                    aunque no sea necesario. Por ejemplo, border-color: red.</li> <br>
+
+                La mayoría de los desarrolladores web no utilizan estas tres propiedades por separado. En su lugar,
+                existe
+                un shorthand: border. Con esta propiedad, podemos escribir sólo border: solid 5px red.
+
+                También podemos controlar y dar un estilo diferente a cada parte de los bordes, por ejemplo: <br><br>
+            </p>
+            <img src="imagen/stile borde.png" alt="stile borde">
+        </section>
+        <hr>
+        <!-- Está es la sección para el tema de Margin -->
+        <section id="Margin">
+
+            <h2>
+                🔳 Margin
+            </h2>
 
             <p>
-                Como ya lo mencione anteriormente cada elemento HTML en una página web es una caja, pero hay dos tipos
-                básicos de cajas: <br>
-                <li>Block boxes.</li>
-                <li>Inline boxes.</li>
-                <br>
-                Estos dos tipos de cajas, existieron desde el principio de la web: <br><br>
+                Es la separación entre una caja y las cajas adyacentes. <br><br>
 
+                El margen es la última área del Box Model y se puede ver como una separación invisible o transparente
+                que
+                ayuda a separar un elemento de otro. Cuando definimos un color o imagen de fondo, este no se propaga a
+                esta
+                sección. <br><br>
+
+                Los márgenes siempre quedan fuera del modelo de caja, por lo que pueden utilizarse para crear espacio
+                entre
+                los elementos. <br><br>
+
+                Recuerda que los valores pueden ser positivos o negativos. <br><br>
+            </p>
+            <img src="imagen/stile margin.png" alt="stile margin">
+            <p>
+                Cada elemento tiene un margen gracias a las hojas de estilo del navegador. <br><br>
             </p>
         </section>
+        <hr>
+        <!-- Está es la sección para el tema de Outline -->
+        <section id="Outline">
+
+            <h2>
+                ⬜ Outline
+            </h2>
+
+            <p>
+                Outline es la línea que rodea a la caja entre el border y el margin. Se utiliza para dibujar un contorno
+                alrededor de un elemento. Un contorno es una línea que se dibuja fuera de los bordes de un elemento. Se
+                puede utilizar con fines decorativos. <br><br>
+
+                La propiedad outline no pertenece al modelo de caja sin embargo esta propiedad es una decoración gráfica
+                que
+                hace que los elementos que ganan el foco, que son por lo general los (input), se coloren como con una
+                ligera
+                aura que los rodea.
+
+                Las propiedades de outline son:
+
+                <li>outline-width</li>
+                <li>outline-style</li>
+                <li>outline-color</li>
+                <li>outline-offset</li>
+            </p>
+        </section>
+        <hr>
     </main>
     <footer class="centrado">
         <p>

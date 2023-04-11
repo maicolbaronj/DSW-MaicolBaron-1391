@@ -71,7 +71,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="audio1.html">Audio</a></li>
-                            
                             <!-- <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -106,51 +105,70 @@
         </ul>
     </aside>
     <main>
-        <section>
+        <!-- Está es la sección para el tema de content -->
+        <section id="content">
+
             <h2>
-                🧐 Introducción al modelo de caja
+                🎦 Content
             </h2>
 
             <p>
-                El nombre 'box-model' (modelo de caja) se llama así porque, en los navegadores, todo se construye a
-                partir
-                de cajas. <br><br>
+                El contenido de la caja, donde aparecen texto, imágenes, etc. <br><br>
 
-                Entonces, lo primero que debemos de entender, es que cada elemento que definimos en un documento HTML se
-                mostrará en el navegador como una caja rectangular esta es la forma en que se representan todos los
-                elementos, no existen elementos triangulares, redondos, poligonales etc. Todos los elementos en HTML por
-                defecto son rectangulares ya que internamente el navegador dibuja un rectángulo. <br><br>
-
-                ⚠️ Las únicas excepciones son las listas y las tablas, que generan más de una caja, y los elementos con
-                display: none o display: contents, que no crean ninguna caja. <br><br>
-
-                Aunque usted visualice en un sitio web algún elemento diseñado en CSS que utiliza border-radius para
-                parecer
-                un círculo, ese elemento seguirá siendo rectangular y esto es porque como he dicho anteriormente cada
-                elemento del diseño web es una caja, el navegador renderiza cada elemento de la página web como un
-                elemento
-                rectangular y con CSS nosotros definimos las propiedades como el tamaño, el color, los estilos, el
-                margen y
-                mucho más de estos elementos rectangulares. <br><br>
-
-                Esto puedes comprobarlo con el siguiente ejemplo, con ayuda de la propiedad outline, podemos ver todos
-                los
-                elementos de la pagina de inicio de Google de forma rectangular y esto lo puedes hacer con cualquier
-                otro
-                sitio web. <br><br>
+                El área del content (como su nombre lo dice) contiene el “contenido” central a mostrar, es decir, un
+                texto,
+                una imagen, un video, etc. El contenido siempre es lo que queremos mostrarle al usuario. Esta área en
+                muchas
+                ocasiones tiene un color o imagen de fondo para hacerla más atractiva. <br><br>
+                Como podemos observar en la imagen, el contenido es el área central de todo el elemento, de tal forma,
+                que
+                el siguiente elemento que lo rodea es el padding. El tamaño de esta área se puede modificar con las
+                propiedades height , width , max-height , max-width , min-height , min-width. <br><br>
             </p>
+            <img src="imagen/content.png" alt="content">
+            <p>
+                Cuando se establece una anchura o una altura en un elemento, esto sólo se aplica al área de contenido
+                (content) de la caja, no a la caja completa. El padding y border se añaden a la anchura y la altura para
+                obtener el tamaño total de la caja, si quieres profundizar mas en este tema, te invito a leer mi
+                articulo de
+                box-sizing. <br><br>
+            </p>
+        </section>
+        <hr>
+        <!-- Está es la sección para el tema de Padding -->
+        <section id="Padding">
 
-            <img src="imagen/outline.png" alt="outline">
+            <h2>
+                🔲 Padding
+            </h2>
 
             <p>
-                Como ya lo mencione anteriormente cada elemento HTML en una página web es una caja, pero hay dos tipos
-                básicos de cajas: <br>
-                <li>Block boxes.</li>
-                <li>Inline boxes.</li>
-                <br>
-                Estos dos tipos de cajas, existieron desde el principio de la web: <br><br>
 
+                Es el área alrededor del contenido. El padding es transparente. <br><br>
+
+                El padding es una separación o espacio interior que existe entre el contenido y el borde de la caja, el
+                cual
+                se utiliza para dar una apariencia estética más atractiva y que el contenido no este pegado al borde.
+                <br><br>
+
+                Cabe mencionar que el padding sigue siendo parte de la caja visible, por lo que, si tenemos una imagen o
+                color de fondo, este se extenderá a través del padding. El padding está delimitado por el borde.
+                <br><br>
+
+                Puedes usar el mismo valor en toda la caja, por ejemplo, padding: 20px o puedes darle padding sólo a un
+                lado
+                de la caja, por ejemplo, padding-right: 10px. <br><br>
+
+                Recuerda que los valores pueden ser positivos o negativos. <br><br>
+
+                Además, el shorthand padding permite dar un valor diferente a cada lado, sin necesidad de escribirlos
+                por
+                separado. Por ejemplo: <br><br>
             </p>
+
+            <!-- ejemplo de como hacer responsive una imagen para que se acomode a un dispositivo movil -->
+            <p><img src="imagen/padding.png" alt="padding" width="95%"></p>
+
         </section>
     </main>
     <footer class="centrado">
